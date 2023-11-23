@@ -1,0 +1,70 @@
+/* Add these variables at the top of your CSS file */
+:root {
+  --primary-bg-color: #f0f0f0; /* Light background color */
+  --secondary-bg-color: #ffffff; /* White background color */
+  --button-color: #3498db; /* Blue button color */
+  --button-text-color: #ffffff; /* White button text color */
+  --result-text-color: #2c3e50; /* Dark result text color */
+}
+
+.calculator {
+  max-width: 400px;
+  margin: 50px auto 0; /* Add margin to the top */
+  padding: 20px; /* Add padding if needed */
+  font-family: 'Arial', sans-serif;
+  background-color: var(--primary-bg-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.display {
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: var(--secondary-bg-color); /* Set the secondary background color */
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: var(--button-color); /* Set the button color */
+  color: var(--button-text-color); /* Set the button text color */
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: darken(var(--button-color), 10%); /* Darken the button color on hover */
+}
+
+.reset {
+  grid-column: span 4;
+}
+
+.result {
+  margin-top: 10px;
+  color: var(--result-text-color); /* Set the result text color */
+}
+
+/* Media query for responsive design */
+@media (max-width: 600px) {
+  .calculator {
+    width: 80%;
+  }
+}
+
